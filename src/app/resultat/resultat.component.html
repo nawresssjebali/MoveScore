@@ -1,0 +1,23 @@
+<div class="resultat-section">
+    <h2>La liste des étudiants qui ont postulé :</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Score</th>
+          <th>email</th>
+          <th>option</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of sortedUsers">
+          <td>{{ user.name }}</td>
+          <td>{{ user.prenom }}</td>
+          <td>{{ user.score }}</td>
+          <td>{{ user.email }}</td>
+         <td>{{ user.selectedoption }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="diffuser-button" (click)="onDiffuserResultatClick()">Diffuser Résultat</button>

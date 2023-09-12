@@ -1,0 +1,15 @@
+<div class="confirmation">
+    <h2>Confirmation</h2>
+    <div *ngIf="person">
+      <p><strong>Nom:</strong> {{ person.name }}</p>
+      <p><strong>Email:</strong> {{ person.email }}</p>
+      <p><strong>Option:</strong> {{ person.selectedoption }}</p>
+      <p><strong>Score:</strong> {{ person.score }}</p>
+      <!-- Add more fields as needed -->
+      <button (click)="confirm()">Confirmer</button>
+      <button (click)="reject()">Ne Confirme Pas</button>
+    </div>
+    <div *ngIf="!person">
+      <p>No person to display.</p>
+    </div>
+  </div>
